@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="210dp"
+        android:src="@drawable/walkthrough_icon_3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:id="@+id/icon"
+        android:layout_height="210dp">
+
+    </ImageView>
+
+    <com.atlanticcity.app.CustomFont.GothamBold
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/get_points"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textAlignment="center"
+        android:id="@+id/header_text"
+        android:layout_height="wrap_content"/>
+
+
+
+
+    <com.atlanticcity.app.CustomFont.GothamLight
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/header_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:textAlignment="center"
+        android:text="@string/saving_money"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

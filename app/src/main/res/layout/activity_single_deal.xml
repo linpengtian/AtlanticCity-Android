@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_bg"
+    android:animateLayoutChanges="true"
+    tools:context=".Activities.SingleDealActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/tab_appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/scroll_view"
+        android:layout_below="@+id/tab_appbar_layout"
+        android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/main_layout"
+                android:visibility="gone"
+                android:layout_height="match_parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="130dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/logo"
+                    android:id="@+id/business_logo"
+                    android:layout_height="130dp">
+
+                </de.hdodenhof.circleimageview.CircleImageView>
+
+                <com.atlanticcity.app.CustomFont.GothamMedium
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/business_logo"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="15dp"
+                    android:textSize="18sp"
+                    android:id="@+id/business_name"
+                    android:layout_height="wrap_content">
+
+                </com.atlanticcity.app.CustomFont.GothamMedium>
+
+                <com.atlanticcity.app.CustomFont.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/business_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:drawablePadding="5dp"
+                    android:id="@+id/address"
+                    android:drawableLeft="@drawable/ic_location"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content">
+
+                </com.atlanticcity.app.CustomFont.CustomTextView>
+
+
+                <com.atlanticcity.app.CustomFont.CustomBoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/address"
+                    android:id="@+id/show_employee"
+                    android:textColor="@color/white"
+                    android:text="@string/show_employess"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/show_employees_bg"
+                    android:padding="15dp"
+                    android:layout_height="wrap_content">
+
+                </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+                <com.atlanticcity.app.CustomFont.CustomBoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/show_employee"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/deal_title"
+
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content">
+
+                </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+                <com.atlanticcity.app.CustomFont.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/deal_title"
+                    android:id="@+id/deal_description"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:layout_marginTop="5dp"
+
+                    android:textSize="18sp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_height="wrap_content">
+
+                </com.atlanticcity.app.CustomFont.CustomTextView>
+
+                <com.atlanticcity.app.CustomFont.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/deal_description"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:drawableLeft="@drawable/ic_calendar"
+
+                    android:drawablePadding="5dp"
+                    android:textSize="16sp"
+                    android:id="@+id/valid_till"
+                    android:textColor="@color/white">
+
+                </com.atlanticcity.app.CustomFont.CustomTextView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/valid_till"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:id="@+id/timer_layout"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginRight="10dp"
+                        android:layout_height="wrap_content">
+                        <com.atlanticcity.app.CustomFont.RobotoBlack
+                            android:layout_width="wrap_content"
+                            android:id="@+id/minutes"
+                            android:text="15"
+                            android:padding="20dp"
+                            android:background="@drawable/timer_bg_border"
+                            android:textSize="36sp"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content">
+
+                        </com.atlanticcity.app.CustomFont.RobotoBlack>
+
+
+                        <com.atlanticcity.app.CustomFont.CustomBoldTextView
+                            android:layout_width="wrap_content"
+                            android:text="@string/minutes"
+                            android:textSize="20sp"
+                            android:layout_gravity="center"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:layout_height="wrap_content">
+
+                        </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="30dp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:src="@drawable/white_dot"
+                            android:layout_marginBottom="5dp"
+                            android:layout_height="wrap_content">
+
+                        </ImageView>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:src="@drawable/white_dot"
+                            android:layout_marginTop="5dp"
+                            android:layout_height="wrap_content">
+
+                        </ImageView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content">
+
+                        <com.atlanticcity.app.CustomFont.RobotoBlack
+                            android:id="@+id/seconds"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/timer_bg_border"
+                            android:padding="20dp"
+                            android:text="00"
+                            android:textColor="@color/black"
+                            android:textSize="36sp">
+
+                        </com.atlanticcity.app.CustomFont.RobotoBlack>
+
+                        <com.atlanticcity.app.CustomFont.CustomBoldTextView
+                            android:layout_width="wrap_content"
+                            android:text="@string/seconds"
+                            android:textSize="20sp"
+                            android:layout_gravity="center"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:layout_height="wrap_content">
+
+                        </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+                <com.atlanticcity.app.CustomFont.CustomButton
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/timer_layout"
+                    android:background="@drawable/green_button_bg"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:text="@string/start_the_countdown"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    android:id="@+id/start_countdown_btn"
+                    android:paddingLeft="60dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:paddingRight="60dp"
+                    android:layout_height="55dp">
+
+                </com.atlanticcity.app.CustomFont.CustomButton>
+
+
+                <com.atlanticcity.app.CustomFont.CustomButton
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/start_countdown_btn"
+                    android:background="@drawable/white_button_bg"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/click_to_get_qr"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textAllCaps="false"
+                    android:id="@+id/scan_qr_code"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:paddingLeft="50dp"
+                    android:visibility="gone"
+                    android:paddingRight="50dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_height="55dp">
+
+                </com.atlanticcity.app.CustomFont.CustomButton>
+
+            </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

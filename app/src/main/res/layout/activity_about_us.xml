@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activities.AboutUs">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/tab_appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.atlanticcity.app.CustomFont.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@+id/tab_appbar_layout"
+        android:text="@string/about_us_text"
+        android:layout_marginTop="30dp"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:id="@+id/header_text"
+        android:layout_height="wrap_content">
+
+    </com.atlanticcity.app.CustomFont.CustomTextView>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:id="@+id/divider1"
+        android:background="@color/gray"
+        android:layout_below="@+id/header_text"
+        android:layout_marginTop="20dp"
+        android:layout_height="0.5dp">
+
+    </View>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/privacy_policy_layout"
+        android:layout_below="@id/divider1"
+        android:layout_height="wrap_content">
+
+
+        <com.atlanticcity.app.CustomFont.CustomTextView
+            android:layout_width="wrap_content"
+            android:text="@string/privacy_policy"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomTextView>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:id="@+id/divider2"
+        android:background="@color/gray"
+        android:layout_below="@+id/privacy_policy_layout"
+        android:layout_height="0.5dp">
+
+    </View>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/terms_of_service_layout"
+        android:layout_below="@id/divider2"
+        android:layout_height="wrap_content">
+
+
+        <com.atlanticcity.app.CustomFont.CustomTextView
+            android:layout_width="wrap_content"
+            android:text="@string/terms_of_service"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomTextView>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:id="@+id/divider3"
+        android:background="@color/gray"
+        android:layout_below="@+id/terms_of_service_layout"
+        android:layout_height="0.5dp">
+
+    </View>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/help_feedback_layout"
+        android:layout_below="@id/divider3"
+        android:layout_height="wrap_content">
+
+
+        <com.atlanticcity.app.CustomFont.CustomTextView
+            android:layout_width="wrap_content"
+            android:text="@string/help_feedback"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomTextView>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:id="@+id/divider4"
+        android:background="@color/gray"
+        android:layout_below="@+id/help_feedback_layout"
+        android:layout_height="0.5dp">
+
+    </View>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/faq_layout"
+        android:layout_below="@id/divider4"
+        android:layout_height="wrap_content">
+
+
+        <com.atlanticcity.app.CustomFont.CustomTextView
+            android:layout_width="wrap_content"
+            android:text="@string/faq"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomTextView>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:id="@+id/divider5"
+        android:background="@color/gray"
+        android:layout_below="@+id/faq_layout"
+        android:layout_height="0.5dp">
+
+    </View>
+
+    <com.atlanticcity.app.CustomFont.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="15dp"
+        android:id="@+id/tvVersionName"
+        android:layout_height="wrap_content">
+
+    </com.atlanticcity.app.CustomFont.CustomTextView>
+
+
+
+
+</RelativeLayout>

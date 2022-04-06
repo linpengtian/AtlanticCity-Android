@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Fragments.Earned">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rlInvitePrizeWon"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="232dp"
+            android:layout_height="190dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:id="@+id/image"
+            android:layout_below="@+id/tab_appbar_layout"
+            android:src="@drawable/congratulations">
+
+        </ImageView>
+        <com.atlanticcity.app.CustomFont.CustomBoldTextView
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/image"
+            android:layout_centerHorizontal="true"
+            android:text="@string/congratulations"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:id="@+id/header_text"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+        <com.atlanticcity.app.CustomFont.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/header_text"
+            android:id="@+id/main_text"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="You have earned a prize, click below to claim your prize."
+            android:textColor="@color/black"
+            android:layout_marginTop="15dp"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomTextView>
+
+        <com.atlanticcity.app.CustomFont.CustomButton
+            android:layout_width="wrap_content"
+            android:text="Claim prize"
+            android:background="@drawable/green_button_bg"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:paddingLeft="80dp"
+            android:paddingRight="80dp"
+            android:textSize="20sp"
+            android:id="@+id/btnClaimPrize"
+            android:textAllCaps="false"
+            android:layout_below="@+id/main_text"
+            android:layout_height="55dp">
+
+        </com.atlanticcity.app.CustomFont.CustomButton>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/no_layout"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/invites_icon"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+
+        <com.atlanticcity.app.CustomFont.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:text="Your invite status will show here\nonce your friends have joined Atlantic city."
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

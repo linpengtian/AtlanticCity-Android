@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/timer_bg"
+    android:layout_height="wrap_content">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="55dp"
+        android:src="@drawable/location_icon"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        app:civ_border_color="@color/silver"
+        app:civ_border_width="1dp"
+        android:id="@+id/icon"
+        android:layout_height="55dp">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <com.atlanticcity.app.CustomFont.CustomBoldTextView
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@+id/icon"
+        android:layout_marginTop="15dp"
+        android:textSize="16sp"
+        android:id="@+id/points_title"
+        android:text="@string/zip_code_points"
+        android:layout_marginLeft="15dp"
+        android:layout_height="wrap_content">
+
+    </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+    <com.atlanticcity.app.CustomFont.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@+id/icon"
+        android:layout_below="@+id/points_title"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/date"
+        android:layout_marginTop="5dp"
+        android:textSize="12sp"
+        android:text="24 March, 2020"
+        android:layout_height="wrap_content">
+
+    </com.atlanticcity.app.CustomFont.CustomTextView>
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/trash"
+       android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:tint="@color/red"
+        android:id="@+id/delete"
+        android:layout_height="25dp">
+
+    </ImageView>
+
+    <com.atlanticcity.app.CustomFont.CustomBoldTextView
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textSize="16sp"
+        android:layout_below="@+id/delete"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="20"
+        android:id="@+id/points"
+        android:layout_height="wrap_content">
+
+    </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+    <com.atlanticcity.app.CustomFont.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/points"
+        android:text="@string/points_capital"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content">
+
+    </com.atlanticcity.app.CustomFont.CustomTextView>
+
+
+</RelativeLayout>

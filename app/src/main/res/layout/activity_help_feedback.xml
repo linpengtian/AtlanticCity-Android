@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activities.HelpFeedback">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/tab_appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <com.atlanticcity.app.CustomFont.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@+id/tab_appbar_layout"
+
+        android:layout_marginTop="30dp"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:id="@+id/header_text"
+        android:layout_height="wrap_content">
+
+    </com.atlanticcity.app.CustomFont.CustomTextView>
+
+    <com.atlanticcity.app.CustomFont.CustomEditText
+        android:layout_width="match_parent"
+        android:layout_below="@+id/header_text"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/feedback_bg"
+        android:hint="@string/give_feed_back"
+        android:textAlignment="viewStart"
+        android:gravity="start"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:id="@+id/feedback"
+        android:textColor="@color/black"
+        android:maxLines="6"
+        android:maxLength="250"
+        android:layout_height="200dp">
+
+    </com.atlanticcity.app.CustomFont.CustomEditText>
+
+    <com.atlanticcity.app.CustomFont.CustomButton
+        android:layout_width="match_parent"
+        android:layout_below="@+id/feedback"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:text="@string/send"
+        android:textColor="@color/white"
+        android:id="@+id/btn_send"
+        android:textAllCaps="false"
+        android:background="@drawable/green_button_bg"
+        android:layout_height="55dp">
+
+    </com.atlanticcity.app.CustomFont.CustomButton>
+
+
+
+    <ImageView
+        android:layout_width="200dp"
+        android:src="@drawable/blur_logo"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_height="200dp">
+
+    </ImageView>
+
+</RelativeLayout>

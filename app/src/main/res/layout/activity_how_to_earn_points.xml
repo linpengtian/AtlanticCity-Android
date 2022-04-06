@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/welcome_bg"
+    tools:context=".Activities.HowToEarnPoints">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/tab_appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/shop_and_earn_layout"
+        android:visibility="gone"
+        android:layout_below="@+id/dob_layout"
+        android:layout_marginTop="15dp">
+
+        <com.atlanticcity.app.CustomFont.CustomBoldTextView
+            android:layout_width="wrap_content"
+            android:text="@string/shop_and_earn"
+            android:textColor="@color/white"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/shop_and_earn_title"
+            android:textSize="17sp"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+        <com.atlanticcity.app.CustomFont.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/shop_and_earn_title"
+            android:layout_marginLeft="20dp"
+            android:textSize="14sp"
+            android:id="@+id/shop_and_earn_points_title"
+            android:textColor="@color/white"
+            android:text="@string/find_deals_and_you_get"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomTextView>
+
+        <com.atlanticcity.app.CustomFont.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/shop_and_earn_points_title"
+            android:layout_marginLeft="20dp"
+            android:textSize="14sp"
+            android:id="@+id/shop_and_earn_points"
+            android:textColor="@color/white"
+
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomTextView>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/save_money"
+            android:id="@+id/shop_and_earn_icon"
+            android:layout_marginRight="20dp"
+            android:layout_height="50dp">
+
+        </ImageView>
+
+        <com.atlanticcity.app.CustomFont.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/shop_and_earn_icon"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:id="@+id/shop_and_earn_points_item"
+
+            android:textSize="15sp"
+            android:drawableRight="@drawable/right_icon"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomTextView>
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_below="@+id/shop_and_earn_points_item"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="1dp">
+
+        </View>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dob_layout"
+        android:visibility="gone"
+        android:layout_below="@+id/zip_code_layout"
+        android:layout_marginTop="15dp">
+
+        <com.atlanticcity.app.CustomFont.CustomBoldTextView
+            android:layout_width="wrap_content"
+            android:text="@string/enter_dob"
+            android:textColor="@color/white"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/dob_title"
+            android:textSize="17sp"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+        <com.atlanticcity.app.CustomFont.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/dob_title"
+            android:layout_marginLeft="20dp"
+            android:textSize="14sp"
+            android:id="@+id/get_dob_points"
+            android:textColor="@color/white"
+            android:text="@string/enter_your_dob_and_get"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomTextView>
+
+        <com.atlanticcity.app.CustomFont.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/get_dob_points"
+            android:layout_marginLeft="20dp"
+            android:textSize="14sp"
+            android:id="@+id/dob_points"
+            android:textColor="@color/white"
+
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomTextView>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/reward"
+            android:id="@+id/dob_icon"
+            android:layout_marginRight="20dp"
+            android:layout_height="50dp">
+
+        </ImageView>
+
+        <com.atlanticcity.app.CustomFont.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/dob_icon"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:id="@+id/dob_points_item"
+
+            android:textSize="15sp"
+            android:drawableRight="@drawable/right_icon"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomTextView>
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_below="@+id/dob_points_item"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="1dp">
+
+        </View>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/zip_code_layout"
+        android:visibility="gone"
+        android:layout_below="@+id/tab_appbar_layout"
+        android:layout_marginTop="15dp">
+
+        <com.atlanticcity.app.CustomFont.CustomBoldTextView
+            android:layout_width="wrap_content"
+            android:text="@string/enter_zip"
+            android:textColor="@color/white"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/zipcode_title"
+            android:textSize="17sp"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+        <com.atlanticcity.app.CustomFont.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/zipcode_title"
+            android:layout_marginLeft="20dp"
+            android:textSize="14sp"
+            android:id="@+id/get_zipcode_points"
+            android:textColor="@color/white"
+            android:text="@string/enter_zip_and_you_get"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomTextView>
+
+        <com.atlanticcity.app.CustomFont.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/get_zipcode_points"
+            android:layout_marginLeft="20dp"
+            android:textSize="14sp"
+            android:id="@+id/zip_code_points"
+            android:textColor="@color/white"
+
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomTextView>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/reward"
+            android:id="@+id/zip_code_icon"
+            android:layout_marginRight="20dp"
+            android:layout_height="50dp">
+
+        </ImageView>
+
+        <com.atlanticcity.app.CustomFont.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/zip_code_icon"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:id="@+id/zip_code_points_item"
+
+            android:textSize="15sp"
+            android:drawableRight="@drawable/right_icon"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomTextView>
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_below="@+id/zip_code_points_item"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="1dp">
+
+        </View>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/share_app_layout"
+        android:visibility="gone"
+        android:layout_below="@+id/shop_and_earn_layout"
+        android:layout_marginTop="15dp">
+
+        <com.atlanticcity.app.CustomFont.CustomBoldTextView
+            android:layout_width="wrap_content"
+            android:text="@string/share_the_app"
+            android:textColor="@color/white"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/share_app_title"
+            android:textSize="17sp"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+        <com.atlanticcity.app.CustomFont.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/share_app_title"
+            android:layout_marginLeft="20dp"
+            android:textSize="14sp"
+            android:id="@+id/get_share_app_points"
+            android:textColor="@color/white"
+            android:text="@string/share_and_get_points"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomTextView>
+
+        <com.atlanticcity.app.CustomFont.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/get_share_app_points"
+            android:layout_marginLeft="20dp"
+            android:textSize="14sp"
+            android:id="@+id/share_app_points"
+            android:textColor="@color/white"
+
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomTextView>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/share_and_earn"
+            android:id="@+id/share_app_icon"
+            android:layout_marginRight="20dp"
+            android:layout_height="50dp">
+
+        </ImageView>
+
+        <com.atlanticcity.app.CustomFont.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/share_app_icon"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:id="@+id/share_app_points_item"
+            android:textSize="15sp"
+            android:drawableRight="@drawable/right_icon"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomTextView>
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_below="@+id/share_app_points_item"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/last_view"
+            android:layout_height="1dp">
+
+        </View>
+        <com.atlanticcity.app.CustomFont.CustomButton
+            android:layout_width="wrap_content"
+            android:text="View deals"
+            android:background="@drawable/green_button_bg"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:paddingLeft="90dp"
+            android:paddingRight="90dp"
+            android:id="@+id/btn_view_deals"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:layout_below="@+id/last_view"
+            android:layout_height="55dp">
+
+        </com.atlanticcity.app.CustomFont.CustomButton>
+
+
+
+    </RelativeLayout>
+
+ <!--   <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/points_rv"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/tab_appbar_layout"
+        android:layout_marginBottom="15dp"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>-->
+
+</RelativeLayout>

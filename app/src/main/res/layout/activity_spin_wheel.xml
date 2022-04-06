@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:animateLayoutChanges="true"
+    tools:context=".Activities.SpinWheel">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/tab_appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/points_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tab_appbar_layout"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab_appbar_layout">
+
+        <com.atlanticcity.app.CustomFont.CustomTextView
+            android:id="@+id/you_have"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You have"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:visibility="gone">
+
+        </com.atlanticcity.app.CustomFont.CustomTextView>
+
+
+        <com.atlanticcity.app.CustomFont.CustomTextView
+            android:id="@+id/user_points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:textColor="@color/red"
+            android:textSize="20sp">
+
+        </com.atlanticcity.app.CustomFont.CustomTextView>
+
+        <com.atlanticcity.app.CustomFont.CustomTextView
+            android:id="@+id/points_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="points to"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:visibility="gone">
+
+        </com.atlanticcity.app.CustomFont.CustomTextView>
+
+
+    </LinearLayout>
+
+    <com.atlanticcity.app.CustomFont.CustomTextView
+        android:id="@+id/bottom_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/points_layout"
+        android:layout_centerHorizontal="true"
+        android:text="@string/spin_win_"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/points_layout">
+
+    </com.atlanticcity.app.CustomFont.CustomTextView>
+
+
+    <ImageView
+        android:id="@+id/cursor_"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:translationY="10dp"
+        android:src="@drawable/cursor"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/frame_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottom_text"
+        app:layout_constraintVertical_bias="1.0">
+
+    </ImageView>
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_below="@+id/bottom_text"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/final_spin"
+        android:padding="7dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/spin_it"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/points_layout"
+        app:layout_constraintVertical_bias="0.88">
+
+
+        <rubikstudio.library.LuckyWheelView
+            android:id="@+id/spin_wheel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:lkwBackgroundColor="#00FF9800"
+            app:lkwCenterImage="@drawable/trasnparent"
+
+            app:lkwEdgeColor="@color/black"
+            app:lkwEdgeWidth="1"
+            app:lkwTopTextColor="#FFFFFF" />
+    </FrameLayout>
+
+    <com.atlanticcity.app.CustomFont.CustomButton
+        android:id="@+id/spin_it"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/green_button_bg"
+        android:text="SPIN"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/points_layout"
+        app:layout_constraintVertical_bias="0.81">
+
+    </com.atlanticcity.app.CustomFont.CustomButton>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

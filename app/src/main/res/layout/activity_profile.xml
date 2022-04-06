@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activities.Profile">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/tab_appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.atlanticcity.app.CustomFont.CustomBoldTextView
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/tab_appbar_layout"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:text="@string/birthday"
+        android:textSize="16sp"
+        android:id="@+id/birthday_text"
+        android:layout_height="wrap_content">
+
+    </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+
+    <com.atlanticcity.app.CustomFont.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/birthday_text"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:id="@+id/birthday"
+        android:layout_marginRight="30dp"
+        android:layout_height="wrap_content">
+
+    </com.atlanticcity.app.CustomFont.CustomTextView>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/gray"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/divider1"
+        android:layout_below="@id/birthday"
+        android:layout_height="0.5dp">
+
+    </View>
+
+    <com.atlanticcity.app.CustomFont.CustomBoldTextView
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/divider1"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:text="@string/zip_code"
+        android:textSize="16sp"
+        android:id="@+id/zipcode_text"
+        android:layout_height="wrap_content">
+
+    </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+    <com.atlanticcity.app.CustomFont.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/zipcode_text"
+        android:layout_marginTop="10dp"
+
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:id="@+id/zipcode"
+        android:layout_marginRight="30dp"
+        android:layout_height="wrap_content">
+
+    </com.atlanticcity.app.CustomFont.CustomTextView>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/gray"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/divider2"
+        android:layout_below="@id/zipcode"
+        android:layout_height="0.5dp">
+
+    </View>
+
+
+    <com.atlanticcity.app.CustomFont.CustomBoldTextView
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/divider2"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:text="@string/email"
+        android:textSize="16sp"
+        android:id="@+id/email_text"
+        android:layout_height="wrap_content">
+
+    </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+    <com.atlanticcity.app.CustomFont.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/email_text"
+        android:layout_marginTop="10dp"
+
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:id="@+id/email"
+        android:layout_marginRight="30dp"
+        android:layout_height="wrap_content">
+
+    </com.atlanticcity.app.CustomFont.CustomTextView>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/gray"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/divider3"
+        android:layout_below="@id/email"
+        android:layout_height="0.5dp">
+
+    </View>
+
+    <ImageView
+        android:layout_width="230dp"
+        android:src="@drawable/blur_logo"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_height="230dp">
+
+    </ImageView>
+
+</RelativeLayout>

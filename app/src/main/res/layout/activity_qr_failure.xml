@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blur_bg"
+    tools:context=".Activities.QR_Failure">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:src="@drawable/oh_no_qr"
+            android:id="@+id/icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:layout_height="250dp">
+
+        </ImageView>
+        <com.atlanticcity.app.CustomFont.CustomBoldTextView
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/icon"
+            android:id="@+id/title_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:text="OH NO!"
+            android:textAlignment="center"
+            android:textSize="23sp"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+
+        <com.atlanticcity.app.CustomFont.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/title_text"
+            android:id="@+id/text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:text="Your QR Code didn't go through"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomTextView>
+
+
+        <com.atlanticcity.app.CustomFont.CustomButton
+            android:layout_width="match_parent"
+            android:id="@+id/btn_try_again"
+            android:text="Try Again"
+            android:textColor="@color/white"
+            android:layout_below="@+id/text"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/green_button_bg"
+            android:layout_marginLeft="55dp"
+            android:layout_marginRight="55dp"
+            android:textAllCaps="false"
+            android:layout_height="55dp">
+
+        </com.atlanticcity.app.CustomFont.CustomButton>
+
+    </RelativeLayout>
+
+
+</ScrollView>

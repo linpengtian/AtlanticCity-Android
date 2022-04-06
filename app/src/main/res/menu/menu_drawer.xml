@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group  android:checkableBehavior="single">
+
+        <group  android:checkableBehavior="single"
+            android:id="@+id/group1">
+            <item
+                android:checkable="false"
+                android:id="@+id/nav_deals"
+                android:title="@string/deals"
+                android:actionMenuTextColor="@color/colorAccent"
+                android:icon="@drawable/deals"
+                />
+        </group>
+
+     <!--   <group  android:checkableBehavior="single"
+            android:id="@+id/group7">
+            <item
+                android:checkable="false"
+                android:id="@+id/nav_buy_show_tickets"
+                android:title="Buy show ticket"
+                android:actionMenuTextColor="@color/colorAccent"
+                android:icon="@drawable/buy_show_tickets"
+                />
+        </group>-->
+
+    <!--    <group  android:checkableBehavior="single"
+            android:id="@+id/group8">
+            <item
+                android:checkable="false"
+                android:id="@+id/nav_refer_friends"
+                android:title="Reffer Friends"
+                android:actionMenuTextColor="@color/colorAccent"
+                android:icon="@drawable/btn_check"
+                />
+        </group>-->
+
+<!--
+
+        <group  android:checkableBehavior="single"
+            android:id="@+id/group9">
+            <item
+                android:checkable="false"
+                android:id="@+id/nav_nearby"
+                android:title="Nearby"
+                android:actionMenuTextColor="@color/colorAccent"
+                android:icon="@drawable/nearby"
+                />
+        </group>
+-->
+
+
+        <group   android:checkableBehavior="single"
+            android:id="@+id/group2">
+            <item
+                android:checkable="false"
+                android:id="@+id/nav_notifications"
+                android:title="@string/notifications"
+                android:actionMenuTextColor="@color/colorAccent"
+                android:icon="@drawable/notifications"
+                />
+
+        </group>
+
+        <group   android:checkableBehavior="single"
+            android:id="@+id/group5">
+            <item
+                android:checkable="false"
+                android:id="@+id/nav_earned_points"
+                android:title="@string/earned_points"
+                android:actionMenuTextColor="@color/colorAccent"
+                android:icon="@drawable/earned_points"
+                />
+
+        </group>
+
+
+        <group   android:checkableBehavior="single"
+            android:id="@+id/group6">
+            <item
+                android:checkable="false"
+                android:id="@+id/nav_how_to_earn_points"
+                android:title="@string/how_to_earn"
+                android:actionMenuTextColor="@color/colorAccent"
+                android:icon="@drawable/earn_points"
+                />
+
+        </group>
+
+
+
+
+        <!--<group   android:checkableBehavior="single"
+            android:id="@+id/group10">
+            <item
+                android:checkable="false"
+                android:id="@+id/nav_favourites"
+                android:title="@string/favourites"
+                android:actionMenuTextColor="@color/colorAccent"
+                android:icon="@drawable/heart"
+                />
+        </group>-->
+
+        <group   android:checkableBehavior="single"
+            android:id="@+id/group15">
+            <item
+                android:checkable="false"
+                android:id="@+id/nav_invitess"
+                android:title="View Invites"
+                android:icon="@drawable/referral"
+                android:actionMenuTextColor="@color/colorAccent" />
+
+        </group>
+
+        <group   android:checkableBehavior="single"
+            android:id="@+id/group3">
+            <item
+                android:checkable="false"
+                android:id="@+id/nav_settings"
+                android:title="@string/options"
+                android:actionMenuTextColor="@color/colorAccent"
+                android:icon="@drawable/settings"
+                />
+        </group>
+
+        <group   android:checkableBehavior="single"
+            android:id="@+id/group11">
+            <item
+                android:checkable="false"
+                android:id="@+id/nav_about_us"
+                android:title="@string/about_us"
+                android:actionMenuTextColor="@color/colorAccent"
+                android:icon="@drawable/help"
+                />
+
+        </group>
+
+
+        <group   android:checkableBehavior="single"
+            android:id="@+id/group4">
+            <item
+                android:checkable="false"
+                android:id="@+id/nav_signout"
+                android:title="@string/sign_out"
+                android:actionMenuTextColor="@color/colorAccent"
+                android:icon="@drawable/sign_out"
+                />
+
+        </group>
+
+    </group>
+</menu>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "195864788891",
+    "firebase_url": "https://atlanticcity-51ed8.firebaseio.com",
+    "project_id": "atlanticcity-51ed8",
+    "storage_bucket": "atlanticcity-51ed8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:195864788891:android:e05f55d9b3b3aa6ac3eb3e",
+        "android_client_info": {
+          "package_name": "com.atlanticcity.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "195864788891-orc1aapail11i58tal6l79069dv1chjd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.atlanticcity.app",
+            "certificate_hash": "57b31a003170a11cf6baa19fb38a77a06522898c"
+          }
+        },
+        {
+          "client_id": "195864788891-d0c34jnieki8mlpcni6iq34hvivd5f2v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5yGm2ZC1i-Gu7NyV3c5u_o3EM7bbkBks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "195864788891-d0c34jnieki8mlpcni6iq34hvivd5f2v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

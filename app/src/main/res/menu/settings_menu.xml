@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:id="@+id/grp1">
+        <item
+            android:id="@+id/business_navigator"
+            android:icon="@drawable/nearby_new"
+
+            app:showAsAction="never"
+            android:actionLayout="@layout/toolbar"
+            android:title="Businesses" />
+    </group>
+
+    <group android:id="@+id/grp2">
+        <item
+            android:id="@+id/favorites_navigator"
+            android:icon="@drawable/ic_favorite_black_24dp"
+
+            app:showAsAction="never"
+            android:actionLayout="@layout/toolbar"
+            android:title="Favorites" />
+    </group>
+
+    <group android:id="@+id/grp3">
+        <item
+            android:id="@+id/settings_navigator"
+            android:icon="@drawable/ic_settings_black_24dp"
+
+            app:showAsAction="never"
+            android:actionLayout="@layout/toolbar"
+            android:title="Settings" />
+    </group>
+
+
+</menu>

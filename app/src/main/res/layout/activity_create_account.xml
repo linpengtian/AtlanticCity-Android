@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_bg"
+    android:animateLayoutChanges="true"
+    tools:context=".Activities.CreateAccount">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--Main Layout-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <com.atlanticcity.app.CustomFont.CustomBoldTextView
+                android:layout_width="wrap_content"
+                android:text="@string/create_account"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:textSize="20sp"
+                android:layout_height="wrap_content">
+
+            </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:visibility="visible"
+                android:layout_marginTop="25dp"
+                android:layout_height="wrap_content">
+
+                <com.atlanticcity.app.CustomFont.CustomEditText
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="5dp"
+                    android:paddingTop="13dp"
+                    android:hint="@string/first_name"
+                    android:paddingBottom="13dp"
+                    android:paddingLeft="25dp"
+                    android:textColorHint="@color/white"
+                    android:id="@+id/etFirstName"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/white"
+                    android:inputType="textPersonName"
+                    android:nextFocusDown="@id/etLastName"
+                    android:background="@drawable/edittext_bg"
+                    android:layout_height="wrap_content">
+
+                </com.atlanticcity.app.CustomFont.CustomEditText>
+
+                <com.atlanticcity.app.CustomFont.CustomEditText
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="25dp"
+                    android:paddingTop="13dp"
+                    android:hint="@string/last_name"
+                    android:paddingBottom="13dp"
+                    android:paddingLeft="25dp"
+                    android:textColorHint="@color/white"
+                    android:id="@+id/etLastName"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/white"
+                    android:inputType="textPersonName"
+                    android:nextFocusDown="@id/et_email_address"
+                    android:background="@drawable/edittext_bg"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <com.atlanticcity.app.CustomFont.CustomEditText
+                android:layout_width="match_parent"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="15dp"
+                android:paddingTop="13dp"
+                android:paddingBottom="13dp"
+                android:hint="@string/email_address"
+                android:paddingLeft="25dp"
+                android:textColorHint="@color/white"
+                android:id="@+id/et_email_address"
+                android:imeOptions="actionNext"
+                android:textColor="@color/white"
+                android:inputType="textEmailAddress"
+                android:nextFocusDown="@id/et_phone"
+                android:background="@drawable/edittext_bg"
+                android:layout_height="wrap_content"/>
+
+            <com.atlanticcity.app.CustomFont.CustomTextView
+                android:layout_width="wrap_content"
+                android:text="@string/email_will_be_used"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="35dp"
+                android:layout_height="wrap_content"/>
+
+            <!--Phone Number Layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edittext_bg"
+                android:layout_height="wrap_content">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:ccp_contentColor="@color/white"
+                    app:ccp_showPhoneCode="true"
+                    android:layout_marginTop="5dp"
+                    app:ccp_showNameCode="false"
+                    app:ccp_defaultNameCode="us"
+                    app:ccp_clickable="false"
+                    android:visibility="visible"
+                    app:ccpDialog_allowSearch="false"
+                    app:ccp_autoFormatNumber="true" />
+
+                <com.atlanticcity.app.CustomFont.CustomEditText
+                    android:layout_width="match_parent"
+                    android:hint="@string/phone_number"
+                    android:background="@null"
+                    android:textColorHint="@color/white"
+                    android:id="@+id/et_phone"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="13dp"
+                    android:maxLength="12"
+                    android:layout_marginLeft="-15dp"
+                    tools:ignore="Autofill"
+                    android:importantForAutofill="no"
+                    android:paddingBottom="13dp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_vertical"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:nextFocusDown="@id/et_password"
+                    android:layout_height="wrap_content">
+
+                </com.atlanticcity.app.CustomFont.CustomEditText>
+
+
+            </LinearLayout>
+
+            <com.atlanticcity.app.CustomFont.CustomTextView
+                android:layout_width="wrap_content"
+                android:text="@string/we_will_send_text"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="35dp"
+                android:layout_height="wrap_content">
+
+            </com.atlanticcity.app.CustomFont.CustomTextView>
+
+            <!--Password Layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/edittext_bg"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:layout_marginLeft="25dp"
+                android:weightSum="5"
+                android:layout_height="wrap_content">
+
+                <com.atlanticcity.app.CustomFont.CustomEditText
+                    android:layout_width="0dp"
+                    android:background="@null"
+                    android:layout_weight="4"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="13dp"
+                    android:paddingBottom="13dp"
+                    android:textColor="@color/white"
+                    android:id="@+id/et_password"
+                    android:textColorHint="@color/white"
+                    android:inputType="text"
+                    android:maxLength="6"
+                    android:imeOptions="actionNext"
+                    android:nextFocusDown="@id/et_password_confirm"
+                    android:hint="@string/password"
+                    android:layout_height="wrap_content">
+
+                </com.atlanticcity.app.CustomFont.CustomEditText>
+
+                <com.atlanticcity.app.CustomFont.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:text="0/6"
+                    android:textColor="@color/white"
+                    android:id="@+id/character_counter_password"
+                    android:layout_height="wrap_content">
+
+                </com.atlanticcity.app.CustomFont.CustomTextView>
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:src="@drawable/eye"
+                    android:layout_weight="0.5"
+                    android:tint="@color/white"
+                    android:padding="5dp"
+                    android:id="@+id/show_password"
+                    android:visibility="gone"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="match_parent">
+
+                </ImageView>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:src="@drawable/hide"
+                    android:layout_weight="0.5"
+                    android:tint="@color/white"
+                    android:padding="5dp"
+                    android:id="@+id/hide_password"
+                    android:visibility="visible"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="match_parent">
+
+                </ImageView>
+
+            </LinearLayout>
+
+            <!--Confirm Password-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/edittext_bg"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:layout_marginLeft="25dp"
+                android:weightSum="5"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+                <com.atlanticcity.app.CustomFont.CustomEditText
+                    android:layout_width="0dp"
+                    android:background="@null"
+                    android:layout_weight="4"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="13dp"
+                    android:paddingBottom="13dp"
+                    android:imeOptions="actionDone"
+                    android:textColor="@color/white"
+                    android:id="@+id/et_password_confirm"
+                    android:textColorHint="@color/white"
+                    android:inputType="textPassword"
+                    android:maxLength="6"
+                    android:hint="@string/confirm_password"
+                    android:layout_height="wrap_content">
+
+                </com.atlanticcity.app.CustomFont.CustomEditText>
+
+                <com.atlanticcity.app.CustomFont.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:text="0/6"
+                    android:textColor="@color/white"
+                    android:id="@+id/character_counter_confirm_password"
+                    android:layout_height="wrap_content">
+
+                </com.atlanticcity.app.CustomFont.CustomTextView>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:src="@drawable/eye"
+                    android:layout_weight="0.5"
+                    android:tint="@color/white"
+                    android:padding="5dp"
+                    android:id="@+id/show_confirm_password"
+                    android:visibility="visible"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="match_parent">
+
+                </ImageView>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:src="@drawable/hide"
+                    android:layout_weight="0.5"
+                    android:tint="@color/white"
+                    android:padding="5dp"
+                    android:id="@+id/hide_confirm_password"
+                    android:visibility="gone"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="match_parent">
+
+                </ImageView>
+
+            </LinearLayout>
+            <com.atlanticcity.app.CustomFont.CustomTextView
+                android:layout_width="wrap_content"
+                android:text="@string/by_tapping_signup"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="35dp"
+                android:layout_height="wrap_content">
+
+            </com.atlanticcity.app.CustomFont.CustomTextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginLeft="35dp"
+                android:layout_height="wrap_content">
+
+                <com.atlanticcity.app.CustomFont.CustomBoldTextView
+                    android:layout_width="wrap_content"
+                    android:text="@string/terms_of_service"
+                    android:textColor="@color/white"
+                    android:id="@+id/terms_of_service"
+                    android:layout_height="wrap_content">
+
+                </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+                <com.atlanticcity.app.CustomFont.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:text="@string/and"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content">
+
+                </com.atlanticcity.app.CustomFont.CustomTextView>
+
+                <com.atlanticcity.app.CustomFont.CustomBoldTextView
+                    android:layout_width="wrap_content"
+                    android:text="@string/privacy_policy"
+                    android:textColor="@color/white"
+                    android:id="@+id/privacy_policy"
+                    android:layout_height="wrap_content">
+
+                </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+            </LinearLayout>
+
+            <com.atlanticcity.app.CustomFont.CustomButton
+                android:id="@+id/sign_up_btn"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="20dp"
+
+                android:background="@drawable/green_button_bg"
+                android:text="@string/sign_up"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+
+
+            <com.atlanticcity.app.CustomFont.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/or_login_using"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:id="@+id/login_text"
+                android:layout_height="wrap_content">
+
+            </com.atlanticcity.app.CustomFont.CustomTextView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="2"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:layout_marginLeft="35dp"
+                    android:id="@+id/fb_login_btn"
+                    android:background="@drawable/fb_btn_bg"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:id="@+id/fb_icon"
+                        android:src="@drawable/ic_facebook"
+                        android:layout_height="wrap_content">
+
+                    </ImageView>
+
+                    <com.atlanticcity.app.CustomFont.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:text="@string/facebook"
+                        android:layout_toRightOf="@+id/fb_icon"
+                        android:textColor="@color/white"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+
+                        android:layout_height="wrap_content">
+
+                    </com.atlanticcity.app.CustomFont.CustomTextView>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:layout_marginLeft="35dp"
+                    android:id="@+id/btn_google_sign_in"
+                    android:background="@drawable/white_button_bg"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:id="@+id/gmail_icon"
+                        android:src="@drawable/gmail"
+                        android:layout_height="wrap_content">
+
+                    </ImageView>
+
+                    <com.atlanticcity.app.CustomFont.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:text="@string/google"
+                        android:layout_toRightOf="@+id/gmail_icon"
+                        android:textColor="@color/default_text_color"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_height="wrap_content">
+
+                    </com.atlanticcity.app.CustomFont.CustomTextView>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

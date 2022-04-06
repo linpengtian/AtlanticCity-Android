@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activities.SearchActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/tab_appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/search_rv"
+        android:layout_below="@+id/tab_appbar_layout"
+        android:layout_marginTop="10dp"
+        android:visibility="visible"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <com.atlanticcity.app.CustomFont.CustomTextView
+        android:layout_width="wrap_content"
+        android:text="@string/no_record_found"
+        android:layout_centerInParent="true"
+        android:textColor="@color/red"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:id="@+id/no_record_found"
+        android:layout_height="wrap_content">
+
+    </com.atlanticcity.app.CustomFont.CustomTextView>
+
+</RelativeLayout>

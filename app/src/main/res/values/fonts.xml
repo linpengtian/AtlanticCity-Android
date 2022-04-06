@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="Roboto_Bold" translatable="false">Font/Roboto-Bold.ttf</string>
+    <string name="Roboto_Medium" translatable="false">Font/Roboto-Medium.ttf</string>
+    <string name="Roboto_Regular" translatable="false">Font/Roboto-Regular.ttf</string>
+    <string name="Roboto_Black" translatable="false">Font/Roboto-Black.ttf</string>
+
+    <string name="SF_Pro_Display_Bold" translatable="false">Font/SF-Pro-Display-Bold.otf</string>
+    <string name="SF_Pro_Display_Medium" translatable="false">Font/SF-Pro-Display-Medium.otf</string>
+    <string name="SF_Pro_Display_Regular" translatable="false">Font/SF-Pro-Display-Regular.otf</string>
+
+    <string name="Gotham_Book" translatable="false">Font/Gotham-Book.otf</string>
+    <string name="Gotham_Light" translatable="false">Font/Gotham-Light.ttf</string>
+    <string name="Gotham_Medium" translatable="false">Font/Gotham-Medium.ttf</string>
+    <string name="Gotham_Bold" translatable="false">Font/Gotham-Bold.ttf</string>
+    <string name="Gotham_Black" translatable="false">Font/Gotham-Black.ttf</string>
+
+</resources>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activities.Settings">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/tab_appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.atlanticcity.app.CustomFont.CustomBoldTextView
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/tab_appbar_layout"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Notifications"
+        android:textSize="16sp"
+        android:id="@+id/notifications"
+        android:layout_height="wrap_content">
+
+    </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+    <com.atlanticcity.app.CustomFont.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/notifications"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:textSize="14sp"
+        android:id="@+id/notifications_text"
+        android:text="Receive messages and rewards\nnotifications from your businesses"
+        android:layout_height="wrap_content">
+
+    </com.atlanticcity.app.CustomFont.CustomTextView>
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:checked="true"
+        android:id="@+id/notif_switch"
+        android:layout_below="@+id/tab_appbar_layout"
+        android:layout_height="wrap_content">
+
+    </Switch>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/notifications_text"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/divider1"
+        android:background="@color/gray">
+
+    </View>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/divider1"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/profile_section"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content">
+
+
+        <com.atlanticcity.app.CustomFont.CustomBoldTextView
+            android:layout_width="wrap_content"
+
+            android:text="Profile"
+            android:textSize="16sp"
+            android:id="@+id/profile"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+        <com.atlanticcity.app.CustomFont.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/profile"
+
+            android:layout_marginTop="15dp"
+            android:textSize="14sp"
+            android:id="@+id/profile_text"
+            android:text="Show your profile"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomTextView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+
+            android:layout_centerVertical="true"
+            android:tint="@color/colorPrimaryDark"
+            android:src="@drawable/ic_right"
+            android:id="@+id/profile_image"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+    </RelativeLayout>
+
+
+
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/profile_section"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/divider2"
+        android:background="@color/gray">
+
+    </View>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/divider2"
+        android:id="@+id/change_password_layout"
+        android:layout_height="wrap_content">
+        <com.atlanticcity.app.CustomFont.CustomBoldTextView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:text="Password"
+            android:textSize="16sp"
+            android:id="@+id/password"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+        <com.atlanticcity.app.CustomFont.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/password"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:textSize="14sp"
+            android:id="@+id/password_text"
+            android:text="Change your password"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomTextView>
+
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_below="@id/divider2"
+        android:layout_marginTop="30dp"
+        android:tint="@color/colorPrimaryDark"
+        android:src="@drawable/ic_right"
+        android:id="@+id/password_image"
+        android:layout_height="wrap_content">
+
+    </ImageView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/change_password_layout"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/divider3"
+        android:background="@color/gray">
+
+    </View>
+
+
+    <com.atlanticcity.app.CustomFont.CustomButton
+        android:layout_width="match_parent"
+        android:layout_below="@+id/divider3"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:text="Save"
+        android:id="@+id/save"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:background="@drawable/green_button_bg"
+        android:layout_height="55dp">
+
+    </com.atlanticcity.app.CustomFont.CustomButton>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:src="@drawable/blur_logo"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_height="200dp">
+
+    </ImageView>
+
+</RelativeLayout>

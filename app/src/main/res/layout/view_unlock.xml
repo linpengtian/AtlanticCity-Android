@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+      >
+    <RelativeLayout
+        android:id="@+id/container_grey_rellayout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+
+        <ImageView
+            android:id="@+id/imageView_slider"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/spin_with_arrow">
+
+        </ImageView>
+
+        <com.atlanticcity.app.CustomFont.CustomBoldTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+
+            android:layout_marginTop="20dp"
+            android:text="@string/swipe"
+            android:layout_marginRight="50dp"
+            android:id="@+id/swipe_text"
+            android:textColor="@color/light_red"
+            android:textSize="20sp">
+
+        </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+        <com.atlanticcity.app.CustomFont.CustomTextView
+            android:id="@+id/swipe_the_wheel_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/swipe_text"
+            android:layout_marginLeft="46dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:textSize="18sp"
+            android:text="@string/swipe_the_wheel"
+            android:textColor="@color/black">
+
+        </com.atlanticcity.app.CustomFont.CustomTextView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_alignParentLeft="true"
+        android:id="@+id/rellayout_background_red"
+        android:layout_width="120dp"
+        android:layout_height="120dp">
+
+    </RelativeLayout>
+</RelativeLayout>

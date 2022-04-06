@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activities.AllowAccess">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/tab_appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.atlanticcity.app.CustomFont.CustomBoldTextView
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/we_will_ever"
+        android:textAlignment="center"
+        android:layout_below="@+id/tab_appbar_layout"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:id="@+id/top_text"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="35dp"
+        android:gravity="center"
+        android:id="@+id/icons_layout"
+        android:layout_below="@+id/top_text"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/contacts"
+            android:layout_height="80dp">
+
+        </ImageView>
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/privacy"
+            android:layout_height="80dp">
+
+        </ImageView>
+
+    </LinearLayout>
+
+    <com.atlanticcity.app.CustomFont.CustomButton
+        android:layout_width="match_parent"
+        android:id="@+id/btnSyncContacts"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/green_button_bg"
+        android:text="@string/sync_contacts"
+        android:textAllCaps="false"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/icons_layout"
+        android:textColor="@color/white"
+        android:layout_height="55dp"/>
+
+    <com.atlanticcity.app.CustomFont.CustomBoldTextView
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/btnSyncContacts"
+        android:layout_marginRight="50dp"
+        android:text="@string/skip"
+        android:id="@+id/btnSkip"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

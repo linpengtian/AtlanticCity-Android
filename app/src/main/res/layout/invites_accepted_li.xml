@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/timer_bg"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="55dp"
+            android:src="@drawable/share_and_earn"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            app:civ_border_color="@color/silver"
+            app:civ_border_width="1dp"
+            android:id="@+id/icon"
+            android:layout_height="55dp">
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <com.atlanticcity.app.CustomFont.CustomBoldTextView
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@+id/icon"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:id="@+id/tvEmail"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+        <com.atlanticcity.app.CustomFont.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@+id/icon"
+            android:layout_below="@+id/tvEmail"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/tvPhone"
+            android:layout_marginTop="5dp"
+            android:textSize="12sp"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomTextView>
+
+        <com.atlanticcity.app.CustomFont.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@+id/icon"
+            android:layout_below="@+id/tvPhone"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/date"
+            android:layout_marginTop="5dp"
+            android:textSize="12sp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomTextView>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

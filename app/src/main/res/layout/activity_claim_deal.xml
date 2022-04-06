@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:nestedScrollingEnabled="true"
+    android:background="@drawable/splash_bg"
+    tools:context=".Activities.ClaimDealActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/tab_appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_scrollFlags="scroll|enterAlways" />
+
+</com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/tab_appbar_layout"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/main_layout"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <com.atlanticcity.app.CustomFont.CustomTextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginLeft="25dp"
+                android:text="Please fill in your information to claim the deal"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_height="wrap_content">
+                <com.atlanticcity.app.CustomFont.CustomEditText
+                    android:layout_width="0dp"
+                    android:paddingTop="13dp"
+                    android:hint="First Name"
+                    android:layout_weight="1"
+                    android:paddingBottom="13dp"
+                    android:paddingLeft="25dp"
+                    android:textColorHint="@color/white"
+                    android:id="@+id/et_first_name"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/white"
+                    android:inputType="text"
+                    android:layout_marginRight="5dp"
+                    android:nextFocusDown="@id/et_last_name"
+                    android:background="@drawable/edittext_bg"
+                    android:layout_height="wrap_content"/>
+
+
+
+                <com.atlanticcity.app.CustomFont.CustomEditText
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingTop="13dp"
+                    android:hint="Last Name"
+                    android:paddingBottom="13dp"
+                    android:paddingLeft="25dp"
+                    android:textColorHint="@color/white"
+                    android:id="@+id/et_last_name"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/white"
+                    android:inputType="text"
+                    android:layout_marginLeft="5dp"
+                    android:nextFocusDown="@id/et_phone"
+                    android:background="@drawable/edittext_bg"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+            <com.atlanticcity.app.CustomFont.CustomEditText
+                android:layout_width="match_parent"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="20dp"
+                android:paddingTop="13dp"
+                android:hint="Enter Address"
+                android:paddingBottom="13dp"
+                android:paddingLeft="25dp"
+                android:textColorHint="@color/white"
+                android:id="@+id/et_address"
+                android:imeOptions="actionDone"
+                android:textColor="@color/white"
+                android:inputType="textPostalAddress"
+                android:background="@drawable/edittext_bg"
+                android:layout_height="wrap_content"/>
+            <RelativeLayout
+                android:id="@+id/search_parent_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:visibility="gone"
+                android:elevation="7dp"
+                android:background="@drawable/search_layout">
+
+                <com.atlanticcity.app.CustomFont.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Hide"
+                    android:id="@+id/tvHide"
+                    android:layout_height="wrap_content"/>
+
+                <com.atlanticcity.app.CustomFont.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="invisible"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/noresult"
+                    android:text="No Search Result"
+                    android:textStyle="bold"
+                    />
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:layout_margin="10dp"
+                    android:layout_below="@+id/tvHide"
+                    android:id="@+id/searchResultLV"
+                    >
+
+                </ListView>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+               android:background="@drawable/timer_bg"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/current_address_layout"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/plane"
+                    android:id="@+id/plane"
+                    android:layout_height="24dp">
+
+                </ImageView>
+
+                <com.atlanticcity.app.CustomFont.CustomBoldTextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/adress_curr"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/black"
+                    android:layout_toRightOf="@+id/plane"
+
+                    android:layout_height="wrap_content">
+
+                </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+                <com.atlanticcity.app.CustomFont.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/adress_curr"
+                    android:layout_toRightOf="@+id/plane"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="14sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/adress_curr_details"
+                    android:layout_height="wrap_content">
+
+                </com.atlanticcity.app.CustomFont.CustomTextView>
+
+
+            </RelativeLayout>
+
+
+
+            <com.atlanticcity.app.CustomFont.CustomEditText
+                android:layout_width="match_parent"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="20dp"
+                android:paddingTop="13dp"
+                android:hint="@string/phone_number"
+                android:paddingBottom="13dp"
+                android:paddingLeft="25dp"
+                android:textColorHint="@color/white"
+                android:id="@+id/et_phone"
+                android:imeOptions="actionNext"
+                android:textColor="@color/white"
+                android:inputType="phone"
+                android:nextFocusDown="@id/et_email"
+                android:background="@drawable/edittext_bg"
+                android:layout_height="wrap_content"/>
+
+
+
+            <com.atlanticcity.app.CustomFont.CustomEditText
+                android:layout_width="match_parent"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="20dp"
+                android:paddingTop="13dp"
+                android:hint="@string/email"
+                android:paddingBottom="13dp"
+                android:paddingLeft="25dp"
+                android:textColorHint="@color/white"
+                android:id="@+id/et_email"
+                android:imeOptions="actionNext"
+                android:textColor="@color/white"
+                android:inputType="textEmailAddress"
+                android:nextFocusDown="@id/et_address"
+                android:background="@drawable/edittext_bg"
+                android:layout_height="wrap_content"/>
+
+
+
+
+
+
+
+            <com.atlanticcity.app.CustomFont.CustomButton
+                android:id="@+id/btn_claim_deal"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/green_button_bg"
+                android:text="Claim Deal"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+
+            <com.atlanticcity.app.CustomFont.CustomBoldTextView
+                android:layout_width="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="25dp"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:text="Skip"
+                android:layout_marginTop="25dp"
+                android:id="@+id/tv_skip"
+                android:layout_height="wrap_content"/>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

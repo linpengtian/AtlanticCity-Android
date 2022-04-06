@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/welcome_bg"
+    tools:context=".Activities.DateOfBirth">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/tab_appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+   <!-- <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:id="@+id/top_layout"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_back"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:id="@+id/icon_back"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+
+
+        <com.atlanticcity.app.CustomFont.CustomTextView
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:id="@+id/title"
+            android:textSize="16sp"
+            android:text="@string/earn_points_now"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/icon_back"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomTextView>
+
+
+    </RelativeLayout>-->
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/tab_appbar_layout"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="196dp"
+                android:layout_height="148dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/get_gifts">
+
+            </ImageView>
+
+            <com.atlanticcity.app.CustomFont.CustomBoldTextView
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/image"
+                android:layout_centerHorizontal="true"
+                android:text="@string/enter_birthday"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                android:id="@+id/header_text"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content">
+
+            </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+            <com.atlanticcity.app.CustomFont.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/header_text"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/tv_birthday"
+                android:textAlignment="center"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="60dp"
+                android:paddingRight="60dp"
+                android:textSize="20sp"
+                android:text="@string/select_date"
+                android:textColor="@color/white"
+
+                android:layout_height="wrap_content">
+
+            </com.atlanticcity.app.CustomFont.CustomTextView>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="21dp"
+                android:layout_above="@+id/line"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/tv_birthday"
+                android:id="@+id/imageCalendar"
+                android:src="@drawable/calendar">
+
+            </ImageView>
+
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/colorPrimaryDark"
+                android:layout_below="@+id/tv_birthday"
+                android:id="@+id/line"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp">
+
+            </View>
+
+            <com.atlanticcity.app.CustomFont.CustomButton
+                android:layout_width="wrap_content"
+                android:text="@string/save"
+                android:background="@drawable/green_button_bg"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="35dp"
+                android:paddingLeft="90dp"
+                android:paddingRight="90dp"
+                android:id="@+id/btn_save"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:layout_below="@+id/line"
+                android:layout_height="55dp">
+
+            </com.atlanticcity.app.CustomFont.CustomButton>
+
+            <com.atlanticcity.app.CustomFont.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/btn_save"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="100dp"
+                android:text="@string/skip"
+                android:textColor="@color/white"
+                android:id="@+id/skip"
+                android:layout_height="wrap_content">
+
+            </com.atlanticcity.app.CustomFont.CustomTextView>
+
+            <ImageView
+                android:layout_width="309dp"
+                android:src="@drawable/logo_ac"
+                android:layout_below="@+id/skip"
+                android:layout_marginTop="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="243dp">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+
+
+
+</RelativeLayout>

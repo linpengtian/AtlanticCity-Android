@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blur_bg"
+    tools:context=".Activities.InviteFriends">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/tab_appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/tab_appbar_layout"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/main_layout"
+            android:visibility="gone"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@drawable/get_gifts"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:id="@+id/icon"
+
+                android:layout_height="wrap_content">
+
+            </ImageView>
+
+            <com.atlanticcity.app.CustomFont.CustomBoldTextView
+                android:layout_width="wrap_content"
+                android:id="@+id/header_text"
+                android:textColor="@color/white"
+                android:layout_below="@+id/icon"
+                android:layout_centerHorizontal="true"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:text="@string/reffer_friends"
+                android:layout_height="wrap_content">
+
+            </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_below="@+id/header_text"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:id="@+id/content_layout"
+                android:layout_height="wrap_content">
+
+                <com.atlanticcity.app.CustomFont.CustomBoldTextView
+                    android:layout_width="wrap_content"
+                    android:text="@string/step_1"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content">
+
+                </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+                <com.atlanticcity.app.CustomFont.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:text="@string/send_your_referral"
+                    android:textColor="@color/white"
+
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content">
+
+                </com.atlanticcity.app.CustomFont.CustomTextView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/white"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="0.5dp">
+
+                </View>
+
+                <com.atlanticcity.app.CustomFont.CustomBoldTextView
+                    android:layout_width="wrap_content"
+                    android:text="@string/step_2"
+                    android:textSize="16sp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content">
+
+                </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+                <com.atlanticcity.app.CustomFont.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:text="@string/your_friends_download"
+                    android:textColor="@color/white"
+
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content">
+
+                </com.atlanticcity.app.CustomFont.CustomTextView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/white"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="0.5dp">
+
+                </View>
+
+                <com.atlanticcity.app.CustomFont.CustomBoldTextView
+                    android:layout_width="wrap_content"
+                    android:text="@string/step_3"
+                    android:textSize="16sp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content">
+
+                </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+                <com.atlanticcity.app.CustomFont.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:text="@string/dining_guru_card"
+                    android:textColor="@color/white"
+
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content">
+
+                </com.atlanticcity.app.CustomFont.CustomTextView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/white"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="0.5dp">
+
+                </View>
+
+            </LinearLayout>
+
+
+            <com.atlanticcity.app.CustomFont.CustomTextView
+                android:layout_width="wrap_content"
+                android:text="@string/send_your_unique"
+                android:layout_below="@id/content_layout"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                android:textColor="@color/white"
+                android:id="@+id/send_your_unique"
+                android:layout_height="wrap_content">
+
+            </com.atlanticcity.app.CustomFont.CustomTextView>
+
+            <com.atlanticcity.app.CustomFont.CustomBoldTextView
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/content_layout"
+                android:layout_marginTop="30dp"
+                android:text="@string/customize_link"
+                android:textColor="@color/red"
+                android:layout_marginRight="30dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+            </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+            <com.atlanticcity.app.CustomFont.CustomBoldTextView
+                android:layout_width="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textSize="18sp"
+                android:id="@+id/link"
+
+                android:background="@drawable/green_border_bg"
+                android:layout_below="@+id/send_your_unique"
+                android:layout_height="wrap_content">
+
+            </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="5"
+                android:layout_below="@+id/link"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="25dp"
+                android:id="@+id/btn_layout"
+                android:layout_height="wrap_content">
+
+                <com.atlanticcity.app.CustomFont.CustomButton
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:background="@drawable/green_button_bg"
+                    android:text="@string/invite_friends_"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    android:id="@+id/btn_invite_friends"
+                    android:layout_height="wrap_content">
+
+                </com.atlanticcity.app.CustomFont.CustomButton>
+
+                <com.atlanticcity.app.CustomFont.CustomBoldTextView
+                    android:layout_width="0dp"
+                    android:text="@string/skip"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:layout_weight="1"
+                    android:id="@+id/skip_btn"
+                    android:textAlignment="viewEnd"
+                    android:layout_height="wrap_content">
+
+                </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_below="@+id/btn_layout"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content">
+
+                <com.atlanticcity.app.CustomFont.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:text="@string/by_participating"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content">
+
+                </com.atlanticcity.app.CustomFont.CustomTextView>
+                <com.atlanticcity.app.CustomFont.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:text=" "
+                    android:layout_height="wrap_content">
+
+                </com.atlanticcity.app.CustomFont.CustomTextView>
+                <com.atlanticcity.app.CustomFont.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:text="@string/terms_and_condition"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_height="wrap_content">
+
+                </com.atlanticcity.app.CustomFont.CustomTextView>
+
+
+            </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+
+
+
+</RelativeLayout>

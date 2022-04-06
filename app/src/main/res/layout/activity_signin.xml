@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_bg"
+    android:animateLayoutChanges="true"
+    tools:context=".Activities.SigninActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--Main Layout-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <com.atlanticcity.app.CustomFont.CustomBoldTextView
+                android:layout_width="wrap_content"
+                android:text="@string/sign_in"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp"
+                android:textSize="20sp"
+                android:layout_height="wrap_content">
+
+            </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+
+            <com.atlanticcity.app.CustomFont.CustomEditText
+                android:layout_width="match_parent"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="25dp"
+                android:paddingTop="13dp"
+                android:hint="@string/email_address"
+                android:paddingBottom="13dp"
+                android:paddingLeft="25dp"
+                android:textColorHint="@color/white"
+                android:id="@+id/et_email_address"
+                android:imeOptions="actionNext"
+                android:textColor="@color/white"
+                android:inputType="textEmailAddress"
+                android:nextFocusDown="@id/et_password"
+                android:background="@drawable/edittext_bg"
+                android:layout_height="wrap_content">
+
+            </com.atlanticcity.app.CustomFont.CustomEditText>
+
+
+
+
+
+
+            <!--Password Layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/edittext_bg"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:layout_marginLeft="25dp"
+                android:weightSum="5"
+                android:layout_height="wrap_content">
+
+                <com.atlanticcity.app.CustomFont.CustomEditText
+                    android:layout_width="0dp"
+                    android:background="@null"
+                    android:layout_weight="4"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="13dp"
+                    android:paddingBottom="13dp"
+                    android:textColor="@color/white"
+                    android:id="@+id/et_password"
+                    android:textColorHint="@color/white"
+                    android:inputType="text"
+                    android:maxLength="6"
+                    android:imeOptions="actionDone"
+                    android:hint="@string/password"
+                    android:layout_height="wrap_content">
+
+                </com.atlanticcity.app.CustomFont.CustomEditText>
+
+                <com.atlanticcity.app.CustomFont.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:text="0/6"
+                    android:textColor="@color/white"
+
+                    android:id="@+id/character_counter_password"
+                    android:layout_height="wrap_content">
+
+                </com.atlanticcity.app.CustomFont.CustomTextView>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:src="@drawable/eye"
+                    android:layout_weight="0.5"
+                    android:tint="@color/white"
+                    android:padding="5dp"
+                    android:id="@+id/show_password"
+                    android:visibility="gone"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="match_parent">
+
+                </ImageView>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:src="@drawable/hide"
+                    android:layout_weight="0.5"
+                    android:tint="@color/white"
+                    android:padding="5dp"
+                    android:id="@+id/hide_password"
+                    android:visibility="visible"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="match_parent">
+
+                </ImageView>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content">
+
+            <com.atlanticcity.app.CustomFont.CustomBoldTextView
+                android:layout_width="wrap_content"
+                android:text="@string/create_account"
+                android:textColor="@color/white"
+                android:id="@+id/create_account"
+                android:layout_height="wrap_content">
+
+            </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+            <com.atlanticcity.app.CustomFont.CustomBoldTextView
+                android:layout_width="wrap_content"
+                android:text="@string/forgot_password"
+                android:textColor="@color/white"
+                android:id="@+id/tv_forgot_password"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content">
+
+            </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+            </RelativeLayout>
+
+
+
+
+            <com.atlanticcity.app.CustomFont.CustomButton
+                android:id="@+id/sign_in_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="@drawable/green_button_bg"
+                android:text="@string/sign_in"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+
+
+            <com.atlanticcity.app.CustomFont.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/or_login_using"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_height="wrap_content">
+
+            </com.atlanticcity.app.CustomFont.CustomTextView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="2"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:layout_marginLeft="35dp"
+                    android:id="@+id/fb_login_btn"
+                    android:background="@drawable/fb_btn_bg"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:id="@+id/fb_icon"
+                        android:src="@drawable/ic_facebook"
+                        android:layout_height="wrap_content">
+
+                    </ImageView>
+
+                    <com.atlanticcity.app.CustomFont.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:text="@string/facebook"
+                        android:layout_toRightOf="@+id/fb_icon"
+                        android:textColor="@color/white"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+
+                        android:layout_height="wrap_content">
+
+                    </com.atlanticcity.app.CustomFont.CustomTextView>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:layout_marginLeft="35dp"
+                    android:id="@+id/btn_google_sign_in"
+                    android:background="@drawable/white_button_bg"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:id="@+id/gmail_icon"
+                        android:src="@drawable/gmail"
+                        android:layout_height="wrap_content">
+
+                    </ImageView>
+
+                    <com.atlanticcity.app.CustomFont.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:text="@string/google"
+                        android:layout_toRightOf="@+id/gmail_icon"
+                        android:textColor="@color/default_text_color"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_height="wrap_content">
+
+                    </com.atlanticcity.app.CustomFont.CustomTextView>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+</ScrollView>

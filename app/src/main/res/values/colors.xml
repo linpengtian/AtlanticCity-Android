@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#1CB171</color>
+    <color name="colorAccent">#1CB171</color>
+
+    <color name="black">#000000</color>
+    <color name="black_zero_opacity">#00000000</color>
+    <color name="black_low_opacity">#B346433D</color>
+    <color name="green_low_opacity">#1CB171</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_zero_opacity">#80FFFFFF</color>
+    <color name="white_low_opacity">#D0FFFFFF</color>
+    <color name="navy_blue">#142149</color>
+    <color name="silver">#c0c0c0</color>
+    <color name="light_black">#504B4B</color>
+    <color name="light_green">#87d1b8</color>
+    <color name="light_gray">#b4b4b4</color>
+    <color name="light_red">#e22329</color>
+    <color name="light_white">#fcfafb</color>
+    <color name="default_text_color">#808080</color>
+    <color name="lighter_white">#fdfdfd</color>
+    <color name="fb_btn_color">#25479b</color>
+    <color name="gray">#808080</color>
+    <color name="blue">#2196F3</color>
+    <color name="green_dark">#006B35</color>
+
+    <array name="array_dot_active">
+        <item>@color/colorPrimaryDark</item>
+        <item>@color/colorPrimaryDark</item>
+        <item>@color/colorPrimaryDark</item>
+        <item>@color/colorPrimaryDark</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/light_gray</item>
+        <item>@color/light_gray</item>
+        <item>@color/light_gray</item>
+        <item>@color/light_gray</item>
+    </array>
+
+    <color name="bright_pink">#FF007F</color>
+    <color name="red">#FF0000</color>
+    <color name="orange">#FF7F00</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="chartreuse">#7FFF00</color>
+    <color name="green">#00FF00</color>
+    <color name="spring_green">#00FF7F</color>
+    <color name="cyan">#00FFFF</color>
+    <color name="azure">#007FFF</color>
+    <color name="violet">#7F00FF</color>
+    <color name="magenta">#FF00FF</color>
+
+    <array name="rainbow">
+        <item>#f6a31f</item>
+        <item>#2b9cd8</item>
+        <item>#e73a3a</item>
+        <item>#27b171</item>
+        <item>#f6a31f</item>
+        <item>#2b9cd8</item>
+        <item>#e73a3a</item>
+        <item>#27b171</item>
+        <item>#f6a31f</item>
+        <item>#2b9cd8</item>
+        <item>#e73a3a</item>
+        <item>#27b171</item>
+        <item>#f6a31f</item>
+        <item>#2b9cd8</item>
+        <item>#e73a3a</item>
+        <item>#27b171</item>
+        <item>#f6a31f</item>
+        <item>#2b9cd8</item>
+        <item>#e73a3a</item>
+        <item>#27b171</item>
+
+
+    </array>
+
+
+</resources>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activities.SyncContactsActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/tab_appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/layout_phone_contacts"
+        android:orientation="horizontal"
+        android:layout_below="@+id/tab_appbar_layout"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:src="@drawable/contact"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/icon1"
+
+            android:layout_height="50dp">
+
+        </ImageView>
+
+        <com.atlanticcity.app.CustomFont.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@+id/icon1"
+          android:layout_gravity="center_vertical"
+            android:text="Phone Contacts"
+            android:layout_marginTop="30dp"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomTextView>
+
+
+
+
+    </RelativeLayout>
+
+    <com.atlanticcity.app.CustomFont.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_below="@+id/tab_appbar_layout"
+        android:text="Sync now"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        android:id="@+id/device_contacts_sync_text"
+        android:textSize="16sp"
+        android:layout_height="wrap_content"/>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/gray"
+        android:id="@+id/contacts_divider"
+        android:layout_below="@+id/layout_phone_contacts"
+        android:layout_height="0.5dp">
+
+    </View>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="1dp"
+        android:id="@+id/layout_fb_contacts"
+        android:visibility="gone"
+        android:layout_below="@+id/contacts_divider"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:src="@drawable/facebook"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/icon2"
+            android:layout_marginBottom="20dp"
+            android:layout_height="50dp">
+
+        </ImageView>
+
+        <com.atlanticcity.app.CustomFont.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@+id/icon2"
+            android:layout_centerVertical="true"
+            android:text="Facebook"
+            android:textSize="16sp"
+            android:layout_marginLeft="15dp"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomTextView>
+
+
+        <com.atlanticcity.app.CustomFont.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            android:text="Sync now"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomTextView>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/gray"
+        android:id="@+id/fb_divider"
+        android:visibility="gone"
+        android:layout_below="@+id/layout_fb_contacts"
+        android:layout_height="0.5dp">
+
+    </View>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/gmail_contacts"
+        android:layout_below="@+id/fb_divider"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:src="@drawable/gmail"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/icon3"
+            android:layout_marginBottom="20dp"
+            android:layout_height="50dp">
+
+        </ImageView>
+
+        <com.atlanticcity.app.CustomFont.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@+id/icon3"
+            android:layout_centerVertical="true"
+            android:text="Gmail"
+            android:textSize="16sp"
+            android:layout_marginLeft="15dp"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomTextView>
+
+
+        <com.atlanticcity.app.CustomFont.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            android:text="Sync now"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomTextView>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray"
+        android:visibility="gone">
+
+    </View>
+
+</RelativeLayout>

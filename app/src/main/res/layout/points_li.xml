@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/main_layout"
+    android:layout_marginTop="15dp">
+
+    <com.atlanticcity.app.CustomFont.CustomBoldTextView
+        android:layout_width="wrap_content"
+        android:text="@string/shop_and_earn"
+        android:textColor="@color/white"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/points_title"
+        android:textSize="17sp"
+        android:layout_height="wrap_content">
+
+    </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+    <com.atlanticcity.app.CustomFont.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/points_title"
+        android:layout_marginLeft="20dp"
+        android:textSize="14sp"
+        android:id="@+id/get_points"
+        android:textColor="@color/white"
+        android:text="@string/find_deals_and_you_get"
+        android:layout_height="wrap_content">
+
+    </com.atlanticcity.app.CustomFont.CustomTextView>
+
+    <com.atlanticcity.app.CustomFont.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/get_points"
+        android:layout_marginLeft="20dp"
+        android:textSize="14sp"
+        android:id="@+id/points"
+        android:textColor="@color/white"
+        android:text="15 points."
+        android:layout_height="wrap_content">
+
+    </com.atlanticcity.app.CustomFont.CustomTextView>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/share_and_earn"
+        android:id="@+id/icon"
+        android:layout_marginRight="20dp"
+        android:layout_height="50dp">
+
+    </ImageView>
+
+    <com.atlanticcity.app.CustomFont.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/icon"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:id="@+id/points_item"
+        android:text="100 POINTS."
+        android:textSize="15sp"
+        android:drawableRight="@drawable/right_icon"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content">
+
+    </com.atlanticcity.app.CustomFont.CustomTextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_below="@+id/points_item"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="1dp">
+
+    </View>
+
+
+</RelativeLayout>

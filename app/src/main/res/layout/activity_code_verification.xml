@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blur_bg"
+    tools:context=".Activities.CodeVerificationActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/tab_appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <com.atlanticcity.app.CustomFont.CustomBoldTextView
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/tab_appbar_layout"
+        android:text="@string/verification_code_sent"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:layout_marginTop="50dp"
+        android:id="@+id/header_text"
+        android:layout_height="wrap_content">
+
+    </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+
+    <com.atlanticcity.app.CustomFont.CustomBoldTextView
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/header_text"
+
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/user_number"
+        android:layout_height="wrap_content">
+
+    </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+    <com.atlanticcity.app.CustomFont.CustomBoldTextView
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/user_number"
+        android:text="@string/enter_it_here"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/enter_it_here"
+        android:layout_height="wrap_content">
+
+    </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+
+    <com.chaos.view.PinView
+        android:id="@+id/digits_layout"
+        android:layout_below="@+id/enter_it_here"
+        style="@style/PinWidget.PinView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:cursorVisible="true"
+        android:layout_centerHorizontal="true"
+        android:inputType="phone"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cursorWidth="2dp"
+        app:hideLineWhenFilled="false"
+        app:itemCount="6"
+        app:lineColor="@color/line_colors"
+        app:itemHeight="55dp"
+        app:itemRadius="6dp"
+        app:itemSpacing="8dp"
+        android:layout_marginTop="25dp"
+        app:itemWidth="48dp"
+        android:textColor="@color/line_colors"
+        app:cursorColor="@color/colorPrimaryDark"
+        app:lineWidth="2dp"
+        app:viewType="rectangle" />
+
+  <!--  <LinearLayout
+        android:layout_width="match_parent"
+        android:weightSum="6"
+        android:layout_below="@+id/enter_it_here"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/digits_layout"
+        android:layout_height="wrap_content">
+
+        <com.atlanticcity.app.CustomFont.CustomEditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:maxLength="1"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/white"
+            android:paddingTop="20dp"
+            android:textAlignment="center"
+            android:focusableInTouchMode="true"
+            android:paddingBottom="20dp"
+            android:id="@+id/code_1"
+            android:textSize="20sp"
+            android:inputType="phone"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/selector_edittext"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomEditText>
+        <com.atlanticcity.app.CustomFont.CustomEditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/code_2"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:maxLength="1"
+            android:focusableInTouchMode="true"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+
+            android:inputType="phone"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/selector_edittext"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomEditText>
+        <com.atlanticcity.app.CustomFont.CustomEditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/code_3"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:maxLength="1"
+            android:focusableInTouchMode="true"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="10dp"
+            android:inputType="phone"
+            android:background="@drawable/selector_edittext"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomEditText>
+        <com.atlanticcity.app.CustomFont.CustomEditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/code_4"
+            android:textSize="20sp"
+            android:maxLength="1"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:focusableInTouchMode="true"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="10dp"
+            android:inputType="phone"
+            android:background="@drawable/selector_edittext"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomEditText>
+
+        <com.atlanticcity.app.CustomFont.CustomEditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/code_5"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:focusableInTouchMode="true"
+            android:paddingTop="20dp"
+            android:textSize="20sp"
+            android:maxLength="1"
+            android:paddingBottom="20dp"
+
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="10dp"
+            android:inputType="phone"
+            android:background="@drawable/selector_edittext"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomEditText>
+
+        <com.atlanticcity.app.CustomFont.CustomEditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:id="@+id/code_6"
+            android:maxLength="1"
+
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:focusableInTouchMode="true"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:inputType="phone"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/selector_edittext"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomEditText>
+
+    </LinearLayout>-->
+
+
+    <com.atlanticcity.app.CustomFont.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_below="@id/digits_layout"
+        android:id="@+id/tvChangeNumber"
+        android:text="Change phone number"
+        android:textColor="@color/white"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:layout_height="wrap_content">
+
+    </com.atlanticcity.app.CustomFont.CustomTextView>
+
+
+    <com.atlanticcity.app.CustomFont.CustomButton
+        android:layout_width="match_parent"
+        android:text="@string/activate_account"
+        android:background="@drawable/green_button_bg"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:textSize="18sp"
+        android:id="@+id/authenticate_account"
+        android:textAllCaps="false"
+        android:layout_below="@+id/tvChangeNumber"
+        android:layout_marginLeft="35dp"
+        android:layout_height="wrap_content">
+
+    </com.atlanticcity.app.CustomFont.CustomButton>
+
+    <com.atlanticcity.app.CustomFont.CustomButton
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/resend_otp"
+        android:text="@string/resend_otp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="45dp"
+        android:textSize="18sp"
+        android:layout_marginLeft="35dp"
+        android:paddingRight="45dp"
+        android:textAllCaps="false"
+        android:background="@drawable/white_button_bg"
+        android:layout_below="@+id/authenticate_account"
+        android:layout_height="wrap_content">
+
+    </com.atlanticcity.app.CustomFont.CustomButton>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

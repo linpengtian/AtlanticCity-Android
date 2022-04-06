@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    app:cardCornerRadius="10dp"
+    android:id="@+id/main_layout"
+    android:elevation="4dp"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/deal_image"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/logo">
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/deal_image"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="15dp"
+            android:layout_height="wrap_content">
+            <com.atlanticcity.app.CustomFont.CustomBoldTextView
+                android:layout_width="wrap_content"
+                android:text="Shows"
+                android:id="@+id/deal_title"
+                android:layout_marginTop="15dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content">
+
+            </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+            <com.atlanticcity.app.CustomFont.CustomTextView
+                android:layout_width="wrap_content"
+                android:id="@+id/business_name"
+                android:maxLines="1"
+                android:layout_marginTop="3dp"
+                android:textSize="14sp"
+                android:layout_height="wrap_content">
+
+            </com.atlanticcity.app.CustomFont.CustomTextView>
+
+
+
+
+
+        </LinearLayout>
+
+
+        <com.atlanticcity.app.CustomFont.CustomCheckBox
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="17sp"
+            android:layout_marginRight="15dp"
+            android:id="@+id/invite_check"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomCheckBox>
+
+        <com.atlanticcity.app.CustomFont.CustomBoldTextView
+            android:layout_width="wrap_content"
+            android:id="@+id/tvInviteSent"
+            android:text="Sent"
+            android:visibility="gone"
+            android:textColor="@color/red"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content">
+
+        </com.atlanticcity.app.CustomFont.CustomBoldTextView>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
